@@ -11,6 +11,5 @@ public class coinCollected : MonoBehaviour
         SoundManager.instance.PlaySound(coinSound);
         Destroy(gameObject);
         ScoreManager.instance.AddPoints(value);
-        // Comment
     }
 }
