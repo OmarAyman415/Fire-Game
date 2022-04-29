@@ -266,7 +266,7 @@ MonoBehaviour:
   numberOfFlashes: 3
   components:
   - {fileID: 6007305981729814982}
-  - {fileID: 0}
+  - {fileID: 3502126073535629028}
   hurtSound: {fileID: 8300000, guid: cfc84de9294625c4ab571de97ea3df10, type: 3}
   dieSound: {fileID: 8300000, guid: 658962c72c193d04dabffaf0b2e89944, type: 3}
 --- !u!114 &6007305981729814982
