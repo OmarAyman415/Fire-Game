@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
-  iframeDuration: 0
-  numberOfFlashes: 0
+  iframeDuration: 1
+  numberOfFlashes: 3
   components:
   - {fileID: 2477983124474812779}
   hurtSound: {fileID: 8300000, guid: cfc84de9294625c4ab571de97ea3df10, type: 3}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 2
-  damage: 2
+  damage: 1
   range: 2.5
   colliderDistance: 0.45
   boxCollider: {fileID: 2477983124474812773}
@@ -184,4 +184,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d55cad3d661f7d47b0c2fe37e0ca7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
