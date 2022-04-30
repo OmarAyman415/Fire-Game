@@ -16458,6 +16458,10 @@ PrefabInstance:
       value: LoadingManager
       objectReference: {fileID: 0}
     - target: {fileID: 6529101098993013765, guid: 77a05cb3358584a45934d4c604c4e68a, type: 3}
+      propertyPath: sceneNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529101098993013765, guid: 77a05cb3358584a45934d4c604c4e68a, type: 3}
       propertyPath: nextLevelSound
       value: 
       objectReference: {fileID: 8300000, guid: 88042ac21c0f1ff4e91f5f6ffc51a85f, type: 3}
