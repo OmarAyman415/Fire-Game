@@ -30802,6 +30802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundRightAngle
       objectReference: {fileID: 0}
+    - target: {fileID: 5163214419048632722, guid: 38fa9ac68401e5f47af5549504b2593c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5811464217963225742, guid: 38fa9ac68401e5f47af5549504b2593c, type: 3}
       propertyPath: m_RootOrder
       value: 8
