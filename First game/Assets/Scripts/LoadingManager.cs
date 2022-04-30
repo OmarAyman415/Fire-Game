@@ -21,6 +21,7 @@ public class LoadingManager : MonoBehaviour
         {
 
             SceneManager.LoadScene(1);
+            Debug.Log(SceneManager.GetActiveScene().name);
             SoundManager.instance.PlaySound(nextLevelSound);
         }
     }

@@ -13,10 +13,14 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+
+        Debug.Log("before IF");
+        // Keep this object even when we go to a new scene
         if (instance == null)
         {
+            Debug.Log("Entered instance");
             instance = this;
+            instance.score = 0;
             DontDestroyOnLoad(gameObject);
         }
         // Delete the duplicate gameObjects
@@ -26,7 +30,6 @@ public class ScoreManager : MonoBehaviour
         }
 
         instance.highscore = PlayerPrefs.GetInt("highscore", 0);
-        instance.score = PlayerPrefs.GetInt("score", 0);
     }
 
 
@@ -44,6 +47,9 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString() + " POINTS";
         PlayerPrefs.SetInt("score", score);
         if (score > highscore)
-            PlayerPrefs.SetInt("highscore", score);
+        {
+            highscore = score;
+            PlayerPrefs.SetInt("highscore", highscore);
+        }
     }
 }
