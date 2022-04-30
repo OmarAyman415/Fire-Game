@@ -13,12 +13,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-
-        Debug.Log("before IF");
         // Keep this object even when we go to a new scene
         if (instance == null)
         {
-            Debug.Log("Entered instance");
             instance = this;
             instance.score = 0;
             DontDestroyOnLoad(gameObject);

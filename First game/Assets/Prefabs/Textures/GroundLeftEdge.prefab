@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8938283045381925423}
   - component: {fileID: 4654097004142085542}
+  - component: {fileID: 4144125472858024802}
   m_Layer: 0
   m_Name: GroundLeftEdge
   m_TagString: Untagged
@@ -82,3 +83,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &4144125472858024802
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300589866117872657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.08660805, y: -0.64340305}
+  - {x: -0.09372473, y: -0.57746315}
+  - {x: -0.11263037, y: -0.52890015}
+  - {x: -0.13821769, y: -0.503849}
+  - {x: -0.20032525, y: -0.4648409}
+  - {x: -0.19872975, y: -0.41138363}
+  - {x: -0.23283601, y: -0.3292532}
+  - {x: -0.2961719, y: -0.21166801}
+  - {x: -0.39287615, y: -0.1353426}
+  - {x: -0.4571371, y: -0.06653786}
+  - {x: -0.4651611, y: -0.024840355}
+  - {x: -0.5210507, y: 0.047163963}
+  - {x: -0.54166293, y: 0.19815922}
+  - {x: -0.53824425, y: 0.39693737}
+  - {x: -0.5985606, y: 0.44141006}
+  - {x: -0.5976534, y: 0.5809021}
+  - {x: -0.55145645, y: 0.60101795}
+  - {x: 0.6386808, y: 0.60343075}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
