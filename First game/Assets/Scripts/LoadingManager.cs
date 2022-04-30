@@ -4,8 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadingManager : MonoBehaviour
 {
+
+    [Header("Scene Number")]
+    [SerializeField] private int sceneNumber;
     [Header("Next Level Sound")]
     [SerializeField] private AudioClip nextLevelSound;
+
+
     private void Update()
     {
         //if (Input.GetKeyDown(KeyCode.F))
@@ -19,8 +24,7 @@ public class LoadingManager : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(sceneNumber);
             SoundManager.instance.PlaySound(nextLevelSound);
         }
     }

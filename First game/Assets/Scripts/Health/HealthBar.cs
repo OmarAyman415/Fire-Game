@@ -16,5 +16,7 @@ public class HealthBar : MonoBehaviour
     {
         currentHealthBar.fillAmount = playerHealth.currentHealth / 10;
         totalHealthBar.fillAmount = playerHealth.getStartingHealth() / 10;
+        if ((playerHealth.getStartingHealth() / 10) == 4)
+            Debug.Log("Yes it's 4");
     }
 }

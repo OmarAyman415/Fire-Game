@@ -73,6 +73,7 @@ public class Health : MonoBehaviour
 
     public void AddMaxHealth()
     {
+        Debug.Log("Added health");
         startingHealth++;
         currentHealth = startingHealth;
 
