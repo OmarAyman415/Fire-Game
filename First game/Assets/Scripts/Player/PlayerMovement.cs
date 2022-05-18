@@ -28,8 +28,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (TimeState())
+            {
+                Pause();
+            }
+            else
+            {
+                UnPause();
+            }
+        }
         // get player's movements left or right
         horizontalInput = Input.GetAxis("Horizontal");
+
 
 
         //Flip Player when moving left-right
@@ -72,6 +85,18 @@ public class PlayerMovement : MonoBehaviour
             wallJumpCooldown += Time.deltaTime;
     }
 
+    private bool TimeState()
+    {
+        return Time.timeScale.Equals(1f);
+    }
+    private void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+    private void UnPause()
+    {
+        Time.timeScale = 1f;
+    }
     // player's jump  method
     private void Jump()
     {
@@ -111,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canAttack()
     {
-        return horizontalInput == 0  && !onWall();
+        return horizontalInput == 0 && !onWall();
     }
 
 }
