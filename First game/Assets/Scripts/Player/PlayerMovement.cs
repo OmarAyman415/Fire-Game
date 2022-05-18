@@ -13,8 +13,13 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
 
+    private Health playerHealth;
+
     [Header("Pause Menu")]
     public GameObject pauseMenu;
+
+    [Header("End Menu")]
+    public GameObject endMenu;
 
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
@@ -27,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        playerHealth = GetComponent<Health>();
         // pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 
     }
@@ -46,6 +52,14 @@ public class PlayerMovement : MonoBehaviour
 
                 UnPause();
             }
+        }
+
+        
+        if (playerHealth.isDead())
+        {
+            Debug.Log("Yup i am dead");
+            Time.timeScale = 0f;
+            endMenu.SetActive(true);
         }
         // get player's movements left or right
         horizontalInput = Input.GetAxis("Horizontal");
@@ -161,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
 
     void LoadMainMenuScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 }

@@ -17,7 +17,7 @@ public class HealthBar : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         totalHealthBar.fillAmount = playerHealth.currentHealth / 10;
         playerHealth = player.GetComponent<Health>();
-        
+
     }
 
     public void RenewPlayer()
@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        
+
         currentHealthBar.fillAmount = playerHealth.currentHealth / 10;
         totalHealthBar.fillAmount = playerHealth.getStartingHealth() / 10;
         if (currentHealthBar.fillAmount == 0.4f)

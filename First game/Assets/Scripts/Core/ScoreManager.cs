@@ -50,4 +50,10 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", highscore);
         }
     }
+
+    public void Reset(){
+        score = 0;
+    }
 }
+
+

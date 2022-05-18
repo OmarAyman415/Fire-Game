@@ -10,8 +10,6 @@ public class LoadingManager : MonoBehaviour
     [Header("Next Level Sound")]
     [SerializeField] private AudioClip nextLevelSound;
 
-    private Health playerHealth;
-    private GameObject player;
     private void Update()
     {
 
@@ -21,13 +19,14 @@ public class LoadingManager : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            player = GameObject.FindGameObjectWithTag("Player");
-            playerHealth = player.GetComponent<Health>();
-            
             Debug.Log("Entered new scene");
+            sceneNumber++;
             SceneManager.LoadScene(sceneNumber);
             SoundManager.instance.PlaySound(nextLevelSound);
 
+
         }
     }
+
+
 }

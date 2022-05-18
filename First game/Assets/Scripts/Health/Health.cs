@@ -23,6 +23,8 @@ public class Health : MonoBehaviour
 
     private bool invulnerable;
 
+    public GameObject endMenu;
+
     private SpriteRenderer spriteRend;
 
     private void Awake()
@@ -31,7 +33,7 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
 
-        if (SceneManager.GetActiveScene().buildIndex.Equals(2))
+        if (SceneManager.GetActiveScene().buildIndex.Equals(3))
         {
             startingHealth = States.PlayerstartingHealth;
             currentHealth = States.PlayerstartingHealth;
@@ -62,6 +64,10 @@ public class Health : MonoBehaviour
                 Debug.Log(gameObject.tag);
                 if (gameObject.tag != "Player")
                     ScoreManager.instance.AddPoints(10);
+                else{
+                    Time.timeScale = 0f;
+                    endMenu.SetActive(true);
+                }
                 // Deactivate all attached component classes
                 foreach (Behaviour component in components)
                 {
