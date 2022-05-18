@@ -22,7 +22,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMovement.canAttack())
+        //                          cooldown is under attackCooldown   , player not on wall         , Game is not paused
+        if (Input.GetMouseButton(0) && cooldownTimer > attackCooldown && playerMovement.canAttack() && playerMovement.TimeState())
             Attack();
 
         cooldownTimer += Time.deltaTime;
@@ -40,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
 
     private int FindFireball()
     {
-        for(int i = 0; i < fireballs.Length; i++)
+        for (int i = 0; i < fireballs.Length; i++)
         {
             if (!fireballs[i].activeInHierarchy)
                 return i;

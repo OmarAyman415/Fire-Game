@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;//Player speed
@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
 
+    [Header("Pause Menu")]
+    public GameObject pauseMenu;
+
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
 
@@ -24,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        // pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
     }
 
     private void Update()
@@ -34,9 +39,11 @@ public class PlayerMovement : MonoBehaviour
             if (TimeState())
             {
                 Pause();
+
             }
             else
             {
+
                 UnPause();
             }
         }
@@ -85,17 +92,23 @@ public class PlayerMovement : MonoBehaviour
             wallJumpCooldown += Time.deltaTime;
     }
 
-    private bool TimeState()
+    public bool TimeState()
     {
         return Time.timeScale.Equals(1f);
     }
-    private void Pause()
+    public void Pause()
     {
         Time.timeScale = 0f;
+        if (pauseMenu == null)
+        {
+
+        }
+        pauseMenu.SetActive(true);
     }
-    private void UnPause()
+    public void UnPause()
     {
         Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
     }
     // player's jump  method
     private void Jump()
@@ -137,6 +150,18 @@ public class PlayerMovement : MonoBehaviour
     public bool canAttack()
     {
         return horizontalInput == 0 && !onWall();
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        AudioListener.volume = 1;
+        Invoke("LoadMainMenuScene", .4f);
+    }
+
+    void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }

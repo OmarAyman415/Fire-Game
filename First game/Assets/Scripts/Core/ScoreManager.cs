@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     public Text highscoreText;
 
-
+    public GameObject pauseMenu;
     int score = 0;
     int highscore = 0;
 
@@ -18,12 +18,13 @@ public class ScoreManager : MonoBehaviour
         {
             instance = this;
             instance.score = 0;
+            pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
             DontDestroyOnLoad(gameObject);
         }
         // Delete the duplicate gameObjects
         else if (instance != null && instance != this)
         {
-            DestroyObject(gameObject);
+            Destroy(gameObject);
         }
 
         instance.highscore = PlayerPrefs.GetInt("highscore", 0);

@@ -23,7 +23,7 @@ public class LoadingManager : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
             playerHealth = player.GetComponent<Health>();
-
+            
             Debug.Log("Entered new scene");
             SceneManager.LoadScene(sceneNumber);
             SoundManager.instance.PlaySound(nextLevelSound);
