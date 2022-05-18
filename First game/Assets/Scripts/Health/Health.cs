@@ -76,6 +76,7 @@ public class Health : MonoBehaviour
         Debug.Log("Added health");
         startingHealth++;
         currentHealth = startingHealth;
+        Debug.Log("Current Health  = " + currentHealth + " and Starting health = " + startingHealth);
 
     }
 

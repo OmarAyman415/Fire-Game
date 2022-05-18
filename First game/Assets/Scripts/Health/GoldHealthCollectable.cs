@@ -19,7 +19,7 @@ public class GoldHealthCollectable : MonoBehaviour
             playerHealth = collision.GetComponent<Health>();
             playerHealth.AddMaxHealth();
 
-            //Debug.Log(playerHealth.getStartingHealth());
+            Debug.Log(playerHealth.getStartingHealth());
         }
     }
 }

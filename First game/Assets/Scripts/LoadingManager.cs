@@ -13,11 +13,7 @@ public class LoadingManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.F))
-        //{
-        //    SceneManager.LoadScene(1);
-
-        //}
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
