@@ -19,7 +19,7 @@ public class SoundManager : MonoBehaviour
         // Delete the duplicate gameObjects
         else if (instance != null && instance != this)
         {
-            DestroyObject(gameObject);
+            Destroy(gameObject);
         }
         
     }
