@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -29,6 +30,12 @@ public class Health : MonoBehaviour
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+
+        if (SceneManager.GetActiveScene().buildIndex.Equals(2))
+        {
+            startingHealth = States.PlayerstartingHealth;
+            currentHealth = States.PlayerstartingHealth;
+        }
     }
 
     public void TakeDamage(float damage)
@@ -76,6 +83,7 @@ public class Health : MonoBehaviour
         Debug.Log("Added health");
         startingHealth++;
         currentHealth = startingHealth;
+        States.PlayerstartingHealth = startingHealth;
         Debug.Log("Current Health  = " + currentHealth + " and Starting health = " + startingHealth);
 
     }

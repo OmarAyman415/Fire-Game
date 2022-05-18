@@ -6816,7 +6816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4952906179043125382, guid: dcb7d9985eea1794087bd51ac545f98e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 15.88
       objectReference: {fileID: 0}
     - target: {fileID: 4952906179043125382, guid: dcb7d9985eea1794087bd51ac545f98e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8079,6 +8079,10 @@ PrefabInstance:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 8300000, guid: cfc84de9294625c4ab571de97ea3df10, type: 3}
+    - target: {fileID: 4470879326894368, guid: deab12e83a6cee74ea64dd15e0c4b491, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.454
+      objectReference: {fileID: 0}
     - target: {fileID: 4470879326894383, guid: deab12e83a6cee74ea64dd15e0c4b491, type: 3}
       propertyPath: m_Icon
       value: 
